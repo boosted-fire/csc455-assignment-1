@@ -77,7 +77,49 @@ namespace VersionControl_Part2
 
         static void RandomStringMod()
         {
-
+            Console.Write("Enter a random string: ");
+            var entry = Console.ReadLine();
+            
+            switch(_rand.Next(0, 10))
+            {
+                case 0: 
+                    Console.WriteLine($"ToUpper: {entry.ToUpper()}");
+                    break;
+                case 1:
+                    Console.WriteLine($"ToLower: {entry.ToLower()}");
+                    break;
+                case 2:
+                    Console.WriteLine($"Reverse: {string.Concat(Enumerable.Reverse(entry))}");
+                    break;
+                case 3:
+                    if(entry.Length > 2)
+                    {
+                        Console.WriteLine($"Substrting - 2: {entry.Substring(entry.Length - 2)}");
+                    }
+                    else
+                    {
+                        Console.WriteLine("To short of string to substring");
+                    }
+                    break;
+                case 4:
+                    Console.WriteLine($"Length: {entry.Length}");
+                    break;
+                case 5:
+                    Console.WriteLine($"Append an A: {entry.Append('A')}");
+                    break;
+                case 6:
+                    Console.WriteLine($"Hash code: {entry.GetHashCode()}");
+                    break;
+                case 7:
+                    Console.WriteLine($"Contains an e: {entry.Contains('e')}");
+                    break;
+                case 8:
+                    Console.WriteLine($"First index of an e: {entry.IndexOf('e')}");
+                    break;
+                case 9:
+                    Console.WriteLine($"All E replaced with 3: {entry.Replace("e", "3")}");
+                    break;
+            }
         }
     }
 }
