@@ -63,7 +63,7 @@ namespace VersionControl_Part2
 
         static void TodaysDate()
         {
-
+            Console.WriteLine($"Today's date is: {DateTime.Now.ToShortDateString()}");
         }
 
         static void RandomDinosaur()
