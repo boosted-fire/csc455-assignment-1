@@ -8,6 +8,8 @@ namespace VersionControl_Part2
 {
     internal class Program
     {
+        private static Random _rand = new Random();
+
         static void Main(string[] args)
         {
             var active = true;
@@ -56,7 +58,7 @@ namespace VersionControl_Part2
 
         static void RandomInteger()
         {
-
+            Console.WriteLine($"Your random number is: {_rand.Next(1,11)}");
         }
 
         static void TodaysDate()
