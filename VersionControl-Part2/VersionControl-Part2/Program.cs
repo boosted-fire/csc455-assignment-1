@@ -68,7 +68,11 @@ namespace VersionControl_Part2
 
         static void RandomDinosaur()
         {
+            var dinos = new List<string> { "Austrosaurus", "Changyuraptor", "Dilophosaurus", "Koreaceratops", "Pararhabdodon",
+            "Nanosaurus", "Dongyangopelta", "Vespersaurus", "Normanniasaurus", "Chromogisaurus"};
+            var orderedDinos = dinos.OrderBy(d => d).ToList();
 
+            Console.WriteLine($"Random dinosaur: {orderedDinos[_rand.Next(0,10)]}");
         }
 
         static void RandomStringMod()
